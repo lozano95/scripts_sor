@@ -15,25 +15,25 @@ else
         calificacion="tu nota es muy deficiente"
       else
         if [ "$nota" == "4" ]; then
-          echo "$1, tu nota es insuficiente"
+          calificacion="tu nota es insuficiente"
         else
           if [ "$nota" == "5" ]; then
-            echo "$1, tu nota es suficiente "
+            calificacion="tu nota es suficiente "
           else   
             if [ "$nota" == "6" ]; then
-              echo "$1, tu nota es bien "
+              calificacion="tu nota es bien "
             else    
               if [ "$ntoa" == "7" ]; then               
-		  echo "$1, tu nota es notable "
+		  calificacion="tu nota es notable "
               else 
                 if [ "$nota" == "8" ]; then
-                 	 echo "$1 tu nota es notable "
+                 	 calificacion="tu nota es notable "
                 else  
                   if [ "$nota:" == "9" ]; then                
-				 echo "$1, tu nota es sobresaliente "
+				 calificacion="tu nota es sobresaliente "
                   else 
 			if [ "$2" == "10" ]; then  
-  				 echo "$1, tu nota es sobresaliente "
+  				 calificacion="tu nota es sobresaliente "
 			else   
  				 echo "$1, tu nota es erronea "
  
