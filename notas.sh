@@ -1,52 +1,61 @@
 #!/bin/bash
-nota=$2
-nombre=$1
+if [ $1 == -k ]; then
+  echo Introduce tu nombre:
+  read nombre
+  echo Introduce tu nota 0-10:
+  read nota
+else 
+  nota=$1
+  nombre=$2
+fi
 
-if [ "$nota" == "0" ]; then
-  calificacion="muy deficiente" 
+calificacion=""
+if [ $nota == 10 ]; then
+  calificacion="sobresaliente"
+  
 else
-  if [ "$nota" == "1" ]; then
-   calificacion="dedicate a vendimiar"
+  if [ $nota == 9 ]; then
+    calificacion="sobresaliente"
   else
-    if [ "$nota" == "2" ]; then 
-      calificacion="tu nota es muy deficiente"
-    else 
-      if [ "$nota" == "3" ]; then 
-        calificacion="tu nota es muy deficiente"
-      else
-        if [ "$nota" == "4" ]; then
-          calificacion="tu nota es insuficiente"
+    if [ $nota == 8 ]; then
+      calificacion="Notable"
+    else
+      if [ $nota == 7 ]; then 
+        calificacion="Notable"
+      else 
+        if [ $nota == 6 ]; then
+          calificacion=" Bien"
         else
-          if [ "$nota" == "5" ]; then
-            calificacion="tu nota es suficiente "
-          else   
-            if [ "$nota" == "6" ]; then
-              calificacion="tu nota es bien "
-            else    
-              if [ "$ntoa" == "7" ]; then               
-		  calificacion="tu nota es notable "
-              else 
-                if [ "$nota" == "8" ]; then
-                 	 calificacion="tu nota es notable "
-                else  
-                  if [ "$nota:" == "9" ]; then                
-				 calificacion="tu nota es sobresaliente "
-                  else 
-			if [ "$2" == "10" ]; then  
-  				 calificacion="tu nota es sobresaliente "
-			else   
- 				 echo "$1, tu nota es erronea "
- 
+          if [ $nota == 5 ]; then
+            calificacion="Suficiente"
+          else
+             if [ $nota == 4 ]; then
+               calificacion="Insuficiente"
+            else
+              if [ $nota == 3 ]; then
+               calificacion= "Muy deficiente"
+              else
+                if [ $nota == 2 ]; then
+                  calificacion="Muy deficiente"
+                else
+                  if [ $nota == 1 ]; then
+                    calificacion="Muy deficiente"
+                  else
+                    if [ $nota == 0 ]; then
+                      calificacion="Suspenso absoluto"
+                    else
+                      calificacion="un dedicate a vendimiar claramente"
                     fi
                   fi
-                fi 
+                fi
               fi
             fi
-          fi
+          fi  
         fi
       fi
-    fi  
+    fi
   fi
-fi    
+fi
 
-echo "$nombre tu calificacion es $calificacion "
+mensaje="tu nota es $calificacion,$nombre"
+echo "$mensaje"
