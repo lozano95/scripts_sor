@@ -1,0 +1,7 @@
+^= empieza por
+\s= espacio y/o tabuladores 
+*= Repetir de cero a infinito
+[123] = coincide con cualquier caracter que tenga ej 123..
+$= la variable
+
+^\s*[0-7][0-7]*\s*$ =cualquier fila que contenga numeros en octal sin importar que lleve espacios delante o detras
